@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '../../models/book';
 import { BookService } from '../../services/book.service';
 
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -27,4 +28,18 @@ export class BooksComponent implements OnInit {
     this.getAllBooks();
   }
 
+}
+
+export class RMComponent implements OnInit{
+  name = 'Angular';
+  data: string;
+  dataLength: boolean;
+
+  ngOnInit() { 
+    this.isReadMore(this.data)
+  }
+  
+  isReadMore(data:string) {
+    this.dataLength = !(data.length > 30)
+  }
 }

@@ -1,5 +1,7 @@
 export class Book {
     id: number;
     title: string;
-    writer: string;
+    writerName: string;
+    plotVf: string;
+    plotEnglish: string;
 }
